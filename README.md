@@ -1,25 +1,5 @@
-# Vegan Product Scout (Backend)
+# Vue 3 + TypeScript + Vite
 
-## Setup
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-## Environment Variables
-Create a `.env` file in the root directory:
-
-```env
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your-anon-key
-```
-
-## Run the Daily Job
-
-```bash
-python main.py
-```
-
-This will scrape `https://veganz.de/produkte/` and upsert products into your Supabase `products` table.
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
