@@ -1,9 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "app/**", "use": "@vercel/static-build" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/app/$1" }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "app/package.json",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "app/dist/$1" }
+    ],
+    "rootDirectory": "app"
+  }
