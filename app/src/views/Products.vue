@@ -1,6 +1,6 @@
 <template>
  <v-container>
-   <v-row align="center" justify="left" class="mb-4">
+   <v-row align="center" class="mb-4">
      <v-col cols="auto">
        <v-img src="/logo.png" alt="VolksVegan Logo" width="100" height="100" contain></v-img>
      </v-col>
@@ -68,7 +68,7 @@ const products = ref<Product[]>([])
 const searchQuery = ref('')
 const loading = ref(false)
 const offset = ref(0)
-const limit = ref(300)
+const limit = ref(100)
 const hasMoreProducts = ref(true)
 const loadingTrigger = ref<HTMLElement | null>(null)
 
@@ -92,7 +92,7 @@ async function fetchProducts(append = false) {
      params.search = searchQuery.value
    }
 
-   const res = await axios.get(`http://localhost:8000/products`, {
+   const res = await axios.get(`http://52.39.221.202:8000/products`, {
      params
    })
 
