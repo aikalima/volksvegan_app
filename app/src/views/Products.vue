@@ -64,11 +64,12 @@ interface Product {
  source: string
 }
 
+const BATCH_SIZE = 100
 const products = ref<Product[]>([])
 const searchQuery = ref('')
 const loading = ref(false)
 const offset = ref(0)
-const limit = ref(100)
+const limit = ref(BATCH_SIZE)
 const hasMoreProducts = ref(true)
 const loadingTrigger = ref<HTMLElement | null>(null)
 
