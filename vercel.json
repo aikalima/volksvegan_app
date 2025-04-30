@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/products",
+      "destination": "http://52.39.221.202:8000/products"
+    }
+  ]
+}

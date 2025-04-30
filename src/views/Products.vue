@@ -90,8 +90,8 @@
     if (searchQuery.value) {
       params.search = searchQuery.value
     }
- 
-    const res = await axios.get(`${import.meta.env.VITE_VOLKSVEGAN_API || 'http://52.39.221.202:8000'}/products`, {
+    
+    const res = await axios.get('/api/products', {
       params
     })
  
