@@ -64,7 +64,7 @@ interface Product {
  source: string
 }
 
-const BATCH_SIZE = 100
+const BATCH_SIZE = import.meta.env.VITE_VOLKSVEGAN_BATCH_SIZE || 100
 const products = ref<Product[]>([])
 const searchQuery = ref('')
 const loading = ref(false)
@@ -93,7 +93,7 @@ async function fetchProducts(append = false) {
      params.search = searchQuery.value
    }
 
-   const res = await axios.get(`http://52.39.221.202:8000/products`, {
+  const res = await axios.get(`${import.meta.env.VITE_VOLKSVEGAN_API || 'http://52.39.221.202:8000'}/products`, {
      params
    })
 
