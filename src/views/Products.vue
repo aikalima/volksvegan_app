@@ -18,14 +18,12 @@
      <v-col
        v-for="product in filteredProducts"
        :key="product.id"
-       cols="12"
-       sm="6"
-       md="4"
+      cols="12" sm="6" md="4" lg="3"
      >
        <v-card>
+        <v-img :src="product.image_url ?? ''" height="200px" cover></v-img>
         <v-card-title>{{ product.title }}</v-card-title>
         <v-card-subtitle>{{ product.category }}</v-card-subtitle>
-        <v-img :src="product.image_url" height="200px" />
         <v-card-actions v-if="product.source_url">
           <v-btn
             color="primary"
